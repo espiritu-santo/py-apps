@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>File Upload</title>
+</head>
+<body>
+<h1>A Geospatial Data Explorer</h1>
+<div>written by Derek and Jennifer Wilson </div>
+<img src="static/screenshot_01.png" width=1000 height=900>
+<h3>Image Source:</h3><h5>ESRI World Imagery Basemap</h5><p>  </p><h3>Data Source:</h3><h5>U.S. Army Corps of Engineers, Portland District, Navigation Section</h5> 
+<a href="#Bottom_of_Page">Go to File Upload</a><br><br>
+<img src="static/screenshot_02.png" width=1200 height=900>
+<img src="static/screenshot_03.png" width=1200 height=900>
+<img src="static/screenshot_04.png" width=1200 height=900>
+<h2>Select a csv file containing xyz data.</h2><br><br>
+<a id="Bottom_of_Page"></a>
+<form action="/" method="POST" enctype="multipart/form-data"><p>
+<label for="csvfile">Select the .csv file to upload:</label>
+<input name="csvfile" type="file"><br><br>
+<input name="filename" type="text" id="filename"></p>
+<input type="submit" value="Upload File">
+</form>
+</body>
+</html>

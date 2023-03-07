@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<title>Instructions</title>
+</head>
+<body>
+<h1>Please follow the instructions below to run the data explorer</h1>
+<p>1.Click Run! once without entering the X,Y coordinate pairs and a plot of the xyz data will be created.</p> 
+<p>2.The coords.txt file will be created in your Downloads folder. Copy this file and paste it into the static folder in the flaskapp directory.</p> 
+<p>3.From the figure use the mouse to hover over the starting position from which you would like to draw a cross-section.</p> 
+<p>4.With the mouse over the X,Y position take a screen shot (print screen) of the X,Y coordinates from the figure.</p> 
+<p>5.Do the same for the desired ending X,Y position.</p> 
+<p>6.Open the screen shots and this time **enter the X,Y coordinate pairs into the textbox.</p> 
+<p>7.Enter the starting X,Y coordinates and Press ENTER, followed by the ending X,Y coordinates.</p>
+<p>Example:</p>
+<p>#X1, Y1 = 7273961, 367077</p>
+<p>#X2, Y2 = 7274257, 366641</p>
+<p>8.Click Run!</p>
+<br><br>
+<p>**The starting X coordinate value must be less than the ending X coordinate value. The cross-section will be created from left-to-right.</p> 
+<p>The program was tested successfully using NAD 83 SPC X,Y coordinates in ift and ft. An example dataset has been provided with this app to get you started.</p>
+<form onsubmit="download(this['text'].value, this['coordinates'].value)">
+  <input type="text" name="text" value="coords.txt">
+  <textarea rows=2 cols=20 name="coordinates"></textarea>
+  <input type="submit" value="Download">
+</form><br></br>
+<button onclick= window.location.href="{{url_for('caller')}}">Run!</button>
+<script language="Javascript" >
+function download(filename, text) {
+  var pom = document.createElement('a');
+  pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+
+encodeURIComponent(text));
+  pom.setAttribute('download', filename);
+
+  pom.style.display = 'none';
+  document.body.appendChild(pom);
+
+  pom.click();
+
+  document.body.removeChild(pom);
+}
+</script>
+</body>
+</html>
