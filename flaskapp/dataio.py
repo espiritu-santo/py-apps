@@ -19,7 +19,7 @@ f = []
 
 if f == []:
    
-    upload_folder = '~/flaskapp/uploads/'
+    upload_folder = '~/Downloads/py-apps-main/flaskapp/uploads/'
     fname = glob.glob1('./uploads/', '*')
     # files = os.walk(top=upload_folder)
     # for file in files:

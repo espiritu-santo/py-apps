@@ -58,8 +58,8 @@ def web():
 def caller():
    # app.run(debug=True, use_reloader=False, host='localhost', port=8080)
    # subprocess.call(['python',' dataio.py./'], shell=True)
-   subprocess.call(['export PYTHONSTARTUP=~/flaskapp/.pythonrc'], shell=True)
-   subprocess.call(['python'], shell=True)
+   subprocess.call(['export PYTHONSTARTUP=~/Downloads/py-apps-main/flaskapp/.pythonrc'], shell=True)
+   subprocess.call(['python3'], shell=True)
 
 if __name__== '__main__':
     proc1 = mp.Process(target=web, daemon=False).start()

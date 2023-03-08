@@ -1,4 +1,5 @@
 1.From a terminal such as BASH, run the following commands:
+(Note: the paths in the python scripts are set to ~/Downloads/py-apps-main/flaskapp/ extracting the flaskapp directory somewhere other than your Downloads folder will require additional setup)
 
 	$ python --version (Where to download the latest version of python for your OS: https://realpython.com/installing-python/)
 	$ python3 -m venv /path/to/flaskapp/ (setup a virtual environment)
